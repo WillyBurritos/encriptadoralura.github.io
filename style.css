@@ -35,7 +35,7 @@ h1 {
 
 body {
     background: #f0f0fb;
-    background-image: url(/imagenes/vecteezy_abstract-boxes-background-modern-technology-with-square_8171873.jpg);
+    background-image: url(imagenes/vecteezy_abstract-boxes-background-modern-technology-with-square_8171873.jpg);
     font-family: 'Inter';
     font-weight: 400;
     font-size: 20px;
@@ -81,7 +81,7 @@ main {
     resize: none;
     flex: 1;
     height: 400px;
-    background-image: url(/imagenes/abstract-techno-background-with-connecting-lines.jpg);
+    background-image: url(imagenes/abstract-techno-background-with-connecting-lines.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     box-shadow: 0 0 30px #4f9;
