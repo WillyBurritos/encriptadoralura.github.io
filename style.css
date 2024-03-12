@@ -6,27 +6,26 @@
 header {
     display: flex;
     min-height: 100px;
-    margin: 0;
+    margin: 0 auto;
     background: rgb(0, 241, 255);
     background: linear-gradient(90deg, rgba(0, 241, 255, 1) 20%, rgba(146, 236, 163, 1) 60%);
     justify-content: left;
-    /* Centrar horizontalmente */
     align-items: center;
     /* Centrar verticalmente */
-} 
+}
 
 a {
-    text-decoration: none; /* Quita el subrayado y cualquier otro efecto de resaltado */
-    color:#c4c4ff;
-  }
-  
-  a:hover {
+    text-decoration: none;
+    /* Quita el subrayado y cualquier otro efecto de resaltado */
+    color: #c4c4ff;
+}
+
+a:hover {
     color: rgb(0, 241, 255);
-  }
+}
 
 .logo {
     margin-left: 10px;
-    width: 100%;
 }
 
 h1 {
@@ -45,8 +44,6 @@ body {
 main {
     display: flex;
     justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .text-area {
@@ -75,7 +72,6 @@ main {
 
 .mensaje {
     position: relative;
-    /* Agrega posición relativa */
     background: white;
     font-size: 30px;
     resize: none;
@@ -96,68 +92,37 @@ main {
     margin-top: 18px;
 }
 
-.botones2{
+.botones2 {
     display: flex;
     margin-top: 18px;
+    margin-left: 50px;
 }
 
-.btn-encriptar {
-    font-size: 25px;
-    background-color: #CCD1D1;
-    color: #0A3871;
-    border: 2px solid #0A3871;
-    border-radius: 24px;
-    padding: 18px 36px;
-    width: 328px;
-    display: inline-block;
-    cursor: pointer;
-    box-shadow: inset 0 0 0 0 #066fef;
-    -webkit-transition: ease-out 0.4s;
-    -moz-transition: ease-out 0.4s;
-    transition: ease-out 0.4s;
-}
-
-.btn-desencriptar {
-    font-size: 25px;
-    color: #0A3871;
-    border: 2px solid #0A3871;
-    border-radius: 24px;
-    margin-left: 30px;
-    padding: 18px 36px;
-    width: 328px;
-    display: inline-block;
-    cursor: pointer;
-    box-shadow: inset 0 0 0 0 #066fef;
-    -webkit-transition: ease-out 0.4s;
-    -moz-transition: ease-out 0.4s;
-    transition: ease-out 0.4s;
-}
-
+.btn-encriptar,
+.btn-desencriptar,
 .btn-copiar {
     font-size: 25px;
     color: #0A3871;
     background-color: #D0ECE7;
     border: 2px solid #0A3871;
     border-radius: 24px;
-    margin-left: 50px;
     padding: 18px 36px;
     width: 328px;
     display: inline-block;
     cursor: pointer;
     box-shadow: inset 0 0 0 0 #066fef;
+    transition: ease-out 0.4s;
     -webkit-transition: ease-out 0.4s;
     -moz-transition: ease-out 0.4s;
     transition: ease-out 0.4s;
 }
 
-.btn-encriptar:hover {
-    box-shadow: inset 0 100px 0 0 #4f9;
+.btn-desencriptar {
+    margin-left: 10px;
 }
 
-.btn-desencriptar:hover {
-    box-shadow: inset 0 100px 0 0 #4f9;
-}
-
+.btn-encriptar:hover,
+.btn-desencriptar:hover,
 .btn-copiar:hover {
     box-shadow: inset 0 100px 0 0 #4f9;
 }
@@ -208,9 +173,7 @@ footer {
 
 
 /*MEDIA QUERY PANTALLA CHICA*/
-
 @media only screen and (max-width: 640px) {
-
 
     header {
         width: 100%;
@@ -218,37 +181,33 @@ footer {
 
     h1 {
         line-height: 1;
-        font-size: 26px;
+        font-size: 24px;
     }
 
     .logo {
-        width: 20%;
+        width: 100%;
     }
 
     main {
-        width: 100%;
-        display: inline-block;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    
+
     .text-area,
     .mensaje {
-        width: 100%;
+        width: 90%;
         max-height: 200px;
         font-size: 24px;
         margin-top: 20px;
-        border-radius: none;
+        margin-left: 5%;
+        margin-right: 5%;
     }
 
-    .mensaje{
-        background-color: none;
-        margin-left: 0;
-        margin-right: 0;
+    .mensaje {
         box-shadow: none;
-        outline: none;
     }
-    
 
     .text-area::placeholder {
         padding: 0;
@@ -256,68 +215,59 @@ footer {
         /* Cambiar el padding del placeholder */
     }
 
-    .botones {
+    .botones,
+    .botones2 {
         display: flex;
         text-align: center;
         justify-content: center;
-        align-items: center; 
+        align-items: center;
     }
 
-    .botones2{
-        display: flex;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
+    .botones2 {
+        margin: 0;
     }
-    
-    .btn-copiar {
-        width: 200px;
-        margin-left: 0; 
-        margin-top: 3px;
-    }
-    
-    .btn-encriptar {
-        width: 190px;
-        margin-left: 0;
-        margin-top: 3px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
+
+    .btn-copiar,
+    .btn-encriptar,
     .btn-desencriptar {
-        width: 190px;
-        margin-left: 25px; /* Ajusta según sea necesario */
+        width: 160px;
+        height: 50px;
         margin-top: 3px;
         display: flex;
         justify-content: center;
         align-items: center;
-        text-align: center !important;
+        text-align: center;
+    }
+
+    .btn-copiar {
+        margin: 0 auto;
+        /* Centra horizontalmente */
+    }
+
+    .btn-desencriptar {
+        margin-left: 25px;
     }
 
     .informacion,
     .puedesCopiar {
         font-size: 17px;
-        color: #000000;
+        color: #dd1b15;
         max-width: 100%;
         justify-content: left;
         margin-top: 5px;
-        margin-left: 3%;
+        margin-left: 5%;
     }
 
     footer {
         max-width: 100%;
         justify-content: center;
-        margin-bottom:0;
-
+        margin-bottom: 0;
     }
 }
 
-
-
 /*MEDIA QUERY PANTALLA MEDIA*/
 
-@media only screen and (max-width: 1007px) {
+@media only screen and (min-width: 641px) and (max-width: 1007px) {
 
     header {
         width: 100%;
@@ -325,7 +275,7 @@ footer {
 
     h1 {
         line-height: 1;
-        font-size: 26px;
+        font-size: 24px;
     }
 
     .logo {
@@ -338,24 +288,20 @@ footer {
         justify-content: center;
         align-items: center;
     }
-    
+
     .text-area,
     .mensaje {
-        width: 100%;
+        width: 90%;
         max-height: 200px;
         font-size: 24px;
         margin-top: 20px;
-        border-radius: none;
+        margin-left: 5%;
+        margin-right: 5%;
     }
 
-    .mensaje{
-        background-color: none;
-        margin-left: 0;
-        margin-right: 0;
+    .mensaje {
         box-shadow: none;
-        outline: none;
     }
-    
 
     .text-area::placeholder {
         padding: 0;
@@ -363,64 +309,58 @@ footer {
         /* Cambiar el padding del placeholder */
     }
 
-    .botones {
+    .botones,
+    .botones2 {
         display: flex;
         text-align: center;
         justify-content: center;
-        align-items: center; 
+        align-items: center;
     }
 
-    .botones2{
-        display: flex;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
+    .botones2 {
+        margin: 0;
     }
-    
-    .btn-copiar {
-        width: 200px;
-        margin-left: 0; 
-        margin-top: 3px;
-    }
-    
-    .btn-encriptar {
-        width: 190px;
-        margin-left: 0;
-        margin-top: 3px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
+
+    .btn-copiar,
+    .btn-encriptar,
     .btn-desencriptar {
-        width: 190px;
-        margin-left: 25px; /* Ajusta según sea necesario */
+        width: 160px;
+        height: 50px;
         margin-top: 3px;
         display: flex;
         justify-content: center;
         align-items: center;
-        text-align: center !important;
+        text-align: center;
+    }
+
+    .btn-copiar {
+        margin: 0 auto;
+        /* Centra horizontalmente */
+    }
+
+    .btn-desencriptar {
+        margin-left: 25px;
     }
 
     .informacion,
     .puedesCopiar {
         font-size: 17px;
-        color: #000000;
+        color: #dd1b15;
         max-width: 100%;
         justify-content: left;
         margin-top: 5px;
-        margin-left: 3%;
+        margin-left: 5%;
     }
 
     footer {
         max-width: 100%;
         justify-content: center;
-        margin-bottom:0;
+        margin-bottom: 0;
     }
 }
 
 /*QUERY PANTALLA GRANDE*/
-@media only screen and (max-width: 1250px) {
+@media only screen and (min-width: 1008px) and (max-width: 1250px) {
 
     header {
         width: 100%;
@@ -428,28 +368,54 @@ footer {
 
     .logo {
         width: 100%;
-    }   
-
-    .botones {
-        display: flex;
-        text-align: center;
-        justify-content: center;
-        align-items: center; 
     }
 
-    .botones2{
+    main {
+        width: 100%;
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text-area,
+    .mensaje {
+        width: 90%;
+        max-height: 200px;
+        font-size: 24px;
+        margin-top: 20px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .mensaje {
+        box-shadow: none;
+    }
+
+    .text-area::placeholder {
+        padding: 0;
+        font-size: 24px;
+        /* Cambiar el padding del placeholder */
+    }
+
+
+    .botones,
+    .botones2 {
         display: flex;
         text-align: center;
         justify-content: center;
         align-items: center;
     }
-    
+
+    .botones2 {
+        margin: 0;
+    }
+
     .btn-copiar {
         width: 200px;
-        margin-left: 0; 
+        margin-left: 0;
         margin-top: 3px;
     }
-    
+
     .btn-encriptar {
         width: 190px;
         margin-left: 0;
@@ -458,10 +424,11 @@ footer {
         justify-content: center;
         align-items: center;
     }
-    
+
     .btn-desencriptar {
         width: 190px;
-        margin-left: 25px; /* Ajusta según sea necesario */
+        margin-left: 25px;
+        /* Ajusta según sea necesario */
         margin-top: 3px;
         display: flex;
         justify-content: center;
@@ -469,13 +436,25 @@ footer {
         text-align: center !important;
     }
 
-    footer {
+    .informacion,
+    .puedesCopiar {
+        font-size: 17px;
+        color: #dd1b15;
         max-width: 100%;
+        justify-content: left;
+        margin-top: 5px;
+        margin-left: 5%;
+    }
+
+    footer {
+        text-align: center;
+        padding: 10px 0;
+        position: relative;
+        bottom: 0px;
+        width: 100%;
         justify-content: center;
-        margin-bottom:0;
     }
 }
-
 
 
 
