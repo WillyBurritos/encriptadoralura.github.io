@@ -1,5 +1,10 @@
 # encriptadoralura.github.io
-Desafío encriptador para Alura Latam
+Desafío encriptador para Alura Latam.
+
+Realizado con:
+-HTML
+-CSS
+-JavaScript
 
 / Se puede ver acá: https://willyburritos.github.io/encriptadoralura.github.io/ /
 
